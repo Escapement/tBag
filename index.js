@@ -41,12 +41,10 @@ module.exports = function tBag(dispatch) {
 		if (/^<FONT>t<\/FONT>$/i.test(event.message)) {
       if(!enable) {
         enable = true
-        console.log('TeaBag Activated')
         tBag();
       }
       else {
         enable = false
-        console.log('Teabag Deactivated')
         clearInterval(interval)
       }
       return false
